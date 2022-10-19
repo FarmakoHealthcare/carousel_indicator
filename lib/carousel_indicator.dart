@@ -67,7 +67,7 @@ class _CarouselIndicatorState extends State<CarouselIndicator>
   Paint _paint = new Paint();
 
   /// Method to initilize [BasePainter] to paint indicators.
-  BasePainter _createPainer() {
+  BasePainter _createPainter() {
     return SlidePainter(widget, _animation.value, _paint);
   }
 
@@ -77,7 +77,7 @@ class _CarouselIndicatorState extends State<CarouselIndicator>
       width: widget.count! * widget.width + (widget.count! - 1) * widget.space,
       height: widget.height,
       child: CustomPaint(
-        painter: _createPainer(),
+        painter: _createPainter(),
       ),
     );
 
