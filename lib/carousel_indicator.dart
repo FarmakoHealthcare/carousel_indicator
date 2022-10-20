@@ -34,7 +34,7 @@ class CarouselIndicator extends StatefulWidget {
   CarouselIndicator({
     Key? key,
     this.width: 20.0,
-    this.height: 6,
+    this.height: 10,
     this.space: 5.0,
     this.count,
     this.cornerRadius: 6,
@@ -66,7 +66,7 @@ class _CarouselIndicatorState extends State<CarouselIndicator>
   /// [Paint] object to paint our indicator
   Paint _paint = new Paint();
 
-  /// Method to initilize [BasePainter] to paint indicators.
+  /// Method to initialize [BasePainter] to paint indicators.
   BasePainter _createPainter() {
     return SlidePainter(widget, _animation.value, _paint);
   }
