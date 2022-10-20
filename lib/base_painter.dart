@@ -27,7 +27,7 @@ abstract class BasePainter extends CustomPainter {
           RRect.fromRectAndRadius(
               Rect.fromCenter(
                   center: Offset((i * distance) + radius, radius),
-                  width: width,
+                  width: height,
                   height: height),
               Radius.circular(widget.cornerRadius)),
           _paint);
@@ -54,9 +54,9 @@ class SlidePainter extends BasePainter {
     canvas.drawRRect(
         RRect.fromRectAndRadius(
             Rect.fromCenter(
-                center: Offset(radius + (page * (width + space)), radius),
-                width: width,
-                height: height),
+                center: Offset(radius + (page * (width + space)), 6),
+                width: height,
+                height: width),
             Radius.circular(cornerRadius)),
         _paint);
   }
